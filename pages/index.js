@@ -32,7 +32,7 @@ export default function Index() {
 
   return (
     <Box id="containerSunContent" position="relative">
-      <h1 className={isMobile ? css.responsiveTittle : css.tittle}>
+      <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
         ¿Cómo te <br />
         <span style={{ fontSize: "0.5em" }}>sientes</span>
         <br />
