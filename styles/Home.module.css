@@ -1,0 +1,53 @@
+.scene{
+  width:100vw;
+  height:80vh;
+  z-index: 0;
+
+}
+
+.canvas{
+  background-image: url("../public/space.jpg");
+  text-align: center;
+  /* z-index: -1; */
+
+}
+
+
+.tittle{
+  position: absolute; 
+  top: 20%;
+  left: 80px;
+  font-weight: 900;
+  font-size: 5em;
+  margin: 0;
+  color: whitesmoke;
+  line-height: 0.6em;
+  letter-spacing: -2px;
+  text-align: left;
+  text-shadow: 2px 2px #e32b6d;
+  z-index: 1;
+}
+
+.responsiveTitle{
+  font-weight: 200;
+  font-size: 3em;
+  color:rgb(255, 255, 255);
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  margin: 0;
+  line-height: 0.6em;
+  letter-spacing: -2px;
+  text-align: center;
+  text-shadow: 1px 1px #e32b6d;
+  z-index: 1;
+}
+
+.emotion{
+  font-weight: 150;
+  font-size: 1em;
+  color:rgb(255, 255, 255);
+  text-shadow: 1px 2px #670227;
+  z-index: 1;
+
+}
