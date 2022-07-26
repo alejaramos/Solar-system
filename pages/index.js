@@ -33,13 +33,9 @@ export default function Index() {
   return (
     <Box id="containerSunContent" position="relative">
       <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
-<<<<<<< HEAD
+
         Ingrid Ramos <br />
         <span style={{ fontSize: "0.5em" }}>My</span>
-=======
-        ¿Cómo te <br />
-        <span style={{ fontSize: "0.5em" }}>sientes</span>
->>>>>>> 4c81bf206460a2cee9977518a70220fce54ee0e5
         <br />
         <span>portfolio</span>
       </h1>
