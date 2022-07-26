@@ -23,25 +23,30 @@ export default function Index() {
   const handleClick = (e) => {
 
     const emotionSelected = e.object.model;
-    // const news = newses[emotionSelected][Math.floor(Math.random() * 3)];
-    // console.log("🚀 ~ file: Sun.js ~ line 23 ~ handleClick ~ news", news);
-    // router.push(
-    //   `/${news._id}/${news.title.toLocaleLowerCase().replaceAll(" ", "-")}`
-    // );
+
+    if( emotionSelected === "tmbd"){
+      router.push("https://github.com/alejaramos/Tmdb") 
+      
+
+    }else if(emotionSelected === "ecommerce" ){
+      router.push("https://github.com/alejaramos/Ecommerce") 
+
+    }else if(emotionSelected === "crud" ){
+      router.push("https://abm-kappa.vercel.app/")
+    }else if(emotionSelected === "wow" ){
+      router.push("https://github.com/joaquinreiners/p5-dev") 
+
+    }
+    
   };
 
   return (
     <Box id="containerSunContent" position="relative">
       <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
-<<<<<<< HEAD
-        Ingrid Ramos <br />
-        <span style={{ fontSize: "0.5em" }}>My</span>
-=======
-        ¿Cómo te <br />
-        <span style={{ fontSize: "0.5em" }}>sientes</span>
->>>>>>> 4c81bf206460a2cee9977518a70220fce54ee0e5
+        Ingrid  <br />
+        <span style={{ fontSize: "0.5em" }}>Ramos </span>
         <br />
-        <span>portfolio</span>
+        <span>My portfolio</span>
       </h1>
 
       <div className={css.scene}>
@@ -55,7 +60,7 @@ export default function Index() {
           {/* opcion autoRotate */}
           <OrbitControls autoRotate />
 
-          <mesh position={[-3.5, 0, -3]} onClick={handleClick} model={1}>
+          <mesh position={[-3.5, 0, -3]} onClick={handleClick} model="tmbd">
             <sphereBufferGeometry args={[1, 16, 16]} />
             <meshStandardMaterial color="#936c5d" />
             <Html distanceFactor={25} position={[0, 0, -1]}>
@@ -63,7 +68,7 @@ export default function Index() {
             </Html>
           </mesh>
 
-          <mesh position={[-4.5, 0, 0]} onClick={handleClick} model={2}>
+          <mesh position={[-4.5, 0, 0]} onClick={handleClick} model="ecommerce">
             <sphereBufferGeometry args={[1, 16, 16]} />
             <meshStandardMaterial color="#2c91bf" />
             <Html
@@ -79,7 +84,7 @@ export default function Index() {
             </Html>
           </mesh>
 
-          <mesh position={[-3.5, 0, 3]} onClick={handleClick} model={0}>
+          <mesh position={[-3.5, 0, 3]} onClick={handleClick} model="crud">
             <sphereBufferGeometry args={[1, 16, 16]} />
             <meshStandardMaterial color="#ffe32f" />
             <Html
@@ -91,7 +96,7 @@ export default function Index() {
               <h1 className={css.emotion}>CRUD system </h1>
             </Html>
           </mesh>
-          <mesh position={[-1.2, 0, 4.5]} onClick={handleClick} model={8}>
+          <mesh position={[-1.2, 0, 4.5]} onClick={handleClick} model="wow">
             <sphereBufferGeometry args={[1, 16, 16]} />
             <meshStandardMaterial color="#c8292d" />
             <Html
@@ -103,76 +108,7 @@ export default function Index() {
               <h1 className={css.emotion}>Magazine wow </h1>
             </Html>
           </mesh>
-          <mesh position={[1.2, 0, 4.5]} onClick={handleClick} model={5}>
-            <sphereBufferGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#ff7012" />
-            <Html
-              distanceFactor={25}
-              position={[0, 0, -1]}
-              occlude
-              onOcclude={setVisible}
-            >
-              <h1 className={css.emotion}>Diversion </h1>
-            </Html>
-          </mesh>
-          <mesh position={[3.5, 0, 3]} onClick={handleClick} model={7}>
-            <sphereBufferGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#f1729b" />
-            <Html
-              distanceFactor={25}
-              position={[0, 0, -1]}
-              occlude
-              onOcclude={setVisible}
-            >
-              <h1 className={css.emotion}>Amor </h1>
-            </Html>
-          </mesh>
-          <mesh position={[4.5, 0, 0]} onClick={handleClick} model={4}>
-            <sphereBufferGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#66a463" />
-            <Html
-              distanceFactor={25}
-              position={[0, 0, -1]}
-              occlude
-              onOcclude={setVisible}
-            >
-              <h1 className={css.emotion}>Naturaleza </h1>
-            </Html>
-          </mesh>
-          <mesh position={[3.5, 0, -3]} onClick={handleClick} model={3}>
-            <sphereBufferGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#5d2876" />
-            <Html distanceFactor={25} position={[0, 0, -1]}>
-              <h1 className={css.emotion}>Reflexion </h1>
-            </Html>
-          </mesh>
-          <mesh position={[1.2, 0, -4.5]} onClick={handleClick} model={9}>
-            <sphereGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#ff0094" />
-            <Html
-              style={{
-                opacity: 10,
-              }}
-              distanceFactor={25}
-              position={[0, 0, -1]}
-              occlude
-              onOcclude={setVisible}
-            >
-              <h1 className={css.emotion}>Accion </h1>
-            </Html>
-          </mesh>
-          <mesh position={[-1.2, 0, -4.5]} onClick={handleClick} model={6}>
-            <sphereGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#ffffff" />
-            <Html
-              distanceFactor={25}
-              position={[0, 0, -1]}
-              occlude
-              onOcclude={setVisible}
-            >
-              <h1 className={css.emotion}>Paz </h1>
-            </Html>
-          </mesh>
+    
           <Sun />
           <ambientLight intensity={0.1} />
           <directionalLight />

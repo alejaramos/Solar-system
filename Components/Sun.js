@@ -9,7 +9,7 @@ export default function Sun() {
   const [active, setActive] = useState(false);
 
   const { scale } = useSpring({
-    scale: active ? 2.5 : 1.5,
+    scale: active ? 1.5 : 2.5,
     config: config.wobbly,
   });
 
