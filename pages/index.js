@@ -32,11 +32,11 @@ export default function Index() {
 
   return (
     <Box id="containerSunContent" position="relative">
-      <h1 className={isMobile ? css.responsiveTittle : css.tittle}>
-        ¿Cómo te <br />
-        <span style={{ fontSize: "0.5em" }}>sientes</span>
+      <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
+        Ingrid Ramos <br />
+        <span style={{ fontSize: "0.5em" }}>My</span>
         <br />
-        <span>hoy ?</span>
+        <span>portfolio</span>
       </h1>
 
       <div className={css.scene}>
@@ -54,7 +54,7 @@ export default function Index() {
             <sphereBufferGeometry args={[1, 16, 16]} />
             <meshStandardMaterial color="#936c5d" />
             <Html distanceFactor={25} position={[0, 0, -1]}>
-              <h1 className={css.emotion}>Tristeza </h1>
+              <h1 className={css.emotion}>movie search</h1>
             </Html>
           </mesh>
 
@@ -70,7 +70,7 @@ export default function Index() {
               occlude
               onOcclude={setVisible}
             >
-              <h1 className={css.emotion}>Misterio </h1>
+              <h1 className={css.emotion}>E-commerce </h1>
             </Html>
           </mesh>
 
@@ -83,7 +83,7 @@ export default function Index() {
               occlude
               onOcclude={setVisible}
             >
-              <h1 className={css.emotion}>Alegria </h1>
+              <h1 className={css.emotion}>CRUD system </h1>
             </Html>
           </mesh>
           <mesh position={[-1.2, 0, 4.5]} onClick={handleClick} model={8}>
@@ -95,7 +95,7 @@ export default function Index() {
               occlude
               onOcclude={setVisible}
             >
-              <h1 className={css.emotion}>Pasion </h1>
+              <h1 className={css.emotion}>Magazine wow </h1>
             </Html>
           </mesh>
           <mesh position={[1.2, 0, 4.5]} onClick={handleClick} model={5}>
