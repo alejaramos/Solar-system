@@ -43,8 +43,9 @@ export default function Index() {
   return (
     <Box id="containerSunContent" position="relative">
       <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
-        Ingrid  <br />
-        <span style={{ fontSize: "0.5em" }}>Ramos </span>
+
+        Ingrid Ramos <br />
+        <span style={{ fontSize: "0.5em" }}>My</span>
         <br />
         <span>My portfolio</span>
       </h1>
