@@ -15,7 +15,7 @@ export default function Sun() {
 
   useFrame(({ clock }) => {
     const a = clock.getElapsedTime();
-    myMesh.current.rotation.z = a;
+    myMesh.current.rotation.x = a;
   });
 
   return (

@@ -5,13 +5,16 @@ import {
   OrbitControls,
   useTexture,
   Html,
-  MeshReflectorMaterial,
 } from "@react-three/drei";
 import { Box } from "@chakra-ui/react";
 import { useMediaQuery, Heading } from "@chakra-ui/react";
 import Sun from "../Components/Sun"
 import { useRouter } from "next/router";
 import css from "../styles/Home.module.css";
+import Contact from "../Components/Contact";
+import * as THREE from 'three'
+import { forwardRef, useLayoutEffect, useRef } from 'react'
+import { Environment, useGLTF, Float, TransformControls, QuadraticBezierLine, Backdrop, ContactShadows } from '@react-three/drei'
 
 //
 
@@ -25,31 +28,52 @@ export default function Index() {
     const emotionSelected = e.object.model;
 
     if( emotionSelected === "tmbd"){
-      router.push("https://github.com/alejaramos/Tmdb") 
+      window.open("https://github.com/alejaramos/Tmdb") 
       
 
     }else if(emotionSelected === "ecommerce" ){
-      router.push("https://github.com/alejaramos/Ecommerce") 
+      window.open("https://github.com/alejaramos/Ecommerce") 
 
     }else if(emotionSelected === "crud" ){
-      router.push("https://abm-kappa.vercel.app/")
+      window.open("https://abm-kappa.vercel.app/")
     }else if(emotionSelected === "wow" ){
-      router.push("https://github.com/joaquinreiners/p5-dev") 
+      window.open("https://github.com/joaquinreiners/p5-dev") 
 
     }
     
   };
 
+  const Ship = forwardRef((props, ref) => {
+    const { nodes, materials } = useGLTF("/model.gltf")
+    useLayoutEffect(() => {
+      Object.values(materials).forEach((material) => {
+        material.roughness = 0
+      })
+    }, [])
+    return (
+      <group ref={ref} {...props} dispose={null} >
+        <mesh castShadow receiveShadow geometry={nodes.Cube005.geometry} material={materials.Mat0}  />
+        <mesh castShadow receiveShadow geometry={nodes.Cube005_1.geometry} material={materials.Mat1} material-color="blue" />
+        <mesh castShadow receiveShadow geometry={nodes.Cube005_2.geometry} material={materials.Mat2} material-envMapIntensity={0.2} material-color="white" />
+        <mesh castShadow receiveShadow geometry={nodes.Cube005_3.geometry} material={materials.Window_Frame} />
+        <mesh castShadow receiveShadow geometry={nodes.Cube005_4.geometry} material={materials.Mat4} />
+        <mesh castShadow receiveShadow geometry={nodes.Cube005_6.geometry} material={materials.Window} />
+      </group>
+    )
+  })
+
+  const ship = useRef()
   return (
+    <>
     <Box id="containerSunContent" position="relative">
       <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
 
         Ingrid Ramos <br />
-        <span style={{ fontSize: "0.5em" }}>My</span>
+        <span style={{ fontSize: "0.5em" }}></span>
         <br />
         <span>My portfolio</span>
       </h1>
-
+      
       <div className={css.scene}>
         <Canvas
           shadows={true}
@@ -61,17 +85,23 @@ export default function Index() {
           {/* opcion autoRotate */}
           <OrbitControls autoRotate />
 
-          <mesh position={[-3.5, 0, -3]} onClick={handleClick} model="tmbd">
-            <sphereBufferGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#936c5d" />
+          
+          <Ship   position={[-4.5, 0, 0]} ref={ship} />
+          <mesh position={[-4.5, 0, 0]} onClick={handleClick} model="tmbd">
+            <sphereBufferGeometry args={[2, 16, 16]} />
+            <meshPhongMaterial color="#ff0000" opacity={0.1} transparent />
+
+
             <Html distanceFactor={25} position={[0, 0, -1]}>
               <h1 className={css.emotion}>movie search</h1>
             </Html>
           </mesh>
 
-          <mesh position={[-4.5, 0, 0]} onClick={handleClick} model="ecommerce">
-            <sphereBufferGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#2c91bf" />
+          <Ship   position={[4.5, 0, 0]} ref={ship} />
+          <mesh position={[4.5, 0, 0]} onClick={handleClick} model="ecommerce">
+         
+            <sphereBufferGeometry args={[2, 16, 16]} />
+            <meshPhongMaterial color="#ff0000" opacity={0.1} transparent />
             <Html
               style={{
                 width: "100px",
@@ -85,9 +115,11 @@ export default function Index() {
             </Html>
           </mesh>
 
-          <mesh position={[-3.5, 0, 3]} onClick={handleClick} model="crud">
-            <sphereBufferGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#ffe32f" />
+
+          <Ship   position={[2, 0, 5]} ref={ship} />
+          <mesh position={[2, 0, 5]} onClick={handleClick} model="crud">
+            <sphereBufferGeometry args={[2, 16, 16]} />
+            <meshPhongMaterial color="#ff0000" opacity={0.1} transparent/>
             <Html
               distanceFactor={25}
               position={[0, 0, -1]}
@@ -97,9 +129,11 @@ export default function Index() {
               <h1 className={css.emotion}>CRUD system </h1>
             </Html>
           </mesh>
-          <mesh position={[-1.2, 0, 4.5]} onClick={handleClick} model="wow">
-            <sphereBufferGeometry args={[1, 16, 16]} />
-            <meshStandardMaterial color="#c8292d" />
+
+          <Ship   position={[-2, 0, -5]} ref={ship} />
+          <mesh position={[-2, 0, -5]} onClick={handleClick} model="wow" >
+            <sphereBufferGeometry args={[2, 16, 16]} />
+            <meshPhongMaterial color="#ff0000" opacity={0.1} transparent />
             <Html
               distanceFactor={25}
               position={[0, 0, -1]}
@@ -113,8 +147,13 @@ export default function Index() {
           <Sun />
           <ambientLight intensity={0.1} />
           <directionalLight />
+        
         </Canvas>
+        <Contact></Contact>
       </div>
+     
     </Box>
+   
+    </>
   );
 }
