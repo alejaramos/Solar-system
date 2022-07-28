@@ -43,7 +43,7 @@ export default function Index() {
     
   };
 
-  const Ship = forwardRef((props, ref) => {
+  const ShipModel = forwardRef((props, ref) => {
     const { nodes, materials } = useGLTF("/model.gltf")
     useLayoutEffect(() => {
       Object.values(materials).forEach((material) => {
@@ -86,7 +86,7 @@ export default function Index() {
           <OrbitControls autoRotate />
 
           
-          <Ship   position={[-4.5, 0, 0]} ref={ship} />
+          <ShipModel   position={[-4.5, 0, 0]} ref={ship} />
           <mesh position={[-4.5, 0, 0]} onClick={handleClick} model="tmbd">
             <sphereBufferGeometry args={[2, 16, 16]} />
             <meshPhongMaterial color="#ff0000" opacity={0.1} transparent />
@@ -97,7 +97,7 @@ export default function Index() {
             </Html>
           </mesh>
 
-          <Ship   position={[4.5, 0, 0]} ref={ship} />
+          <ShipModel   position={[4.5, 0, 0]} ref={ship} />
           <mesh position={[4.5, 0, 0]} onClick={handleClick} model="ecommerce">
          
             <sphereBufferGeometry args={[2, 16, 16]} />
@@ -116,7 +116,7 @@ export default function Index() {
           </mesh>
 
 
-          <Ship   position={[2, 0, 5]} ref={ship} />
+          <ShipModel   position={[2, 0, 5]} ref={ship} />
           <mesh position={[2, 0, 5]} onClick={handleClick} model="crud">
             <sphereBufferGeometry args={[2, 16, 16]} />
             <meshPhongMaterial color="#ff0000" opacity={0.1} transparent/>
@@ -130,7 +130,7 @@ export default function Index() {
             </Html>
           </mesh>
 
-          <Ship   position={[-2, 0, -5]} ref={ship} />
+          <ShipModel   position={[-2, 0, -5]} ref={ship} />
           <mesh position={[-2, 0, -5]} onClick={handleClick} model="wow" >
             <sphereBufferGeometry args={[2, 16, 16]} />
             <meshPhongMaterial color="#ff0000" opacity={0.1} transparent />
