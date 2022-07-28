@@ -37,7 +37,7 @@ const ShipModel = forwardRef((props, ref) => {
   )
 })
 
-export default function Index() {
+const  Index=() =>{
   const [hidden, setVisible] = useState(false);
   const [isMobile] = useMediaQuery("(max-width: 775px)");
   const router = useRouter();
@@ -64,8 +64,9 @@ export default function Index() {
 
 
   const ship = useRef()
+
   return (
-    <>
+   
     <Box id="containerSunContent" position="relative">
       <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
 
@@ -150,11 +151,15 @@ export default function Index() {
           <directionalLight />
         
         </Canvas>
-        <Contact></Contact>
+  
       </div>
      
     </Box>
    
-    </>
+  
   );
 }
+
+Index.displayName = 'MyApp';
+
+export default Index;
