@@ -56,7 +56,7 @@ const  Index=() =>{
     }else if(emotionSelected === "crud" ){
       window.open("https://abm-kappa.vercel.app/")
     }else if(emotionSelected === "wow" ){
-      window.open("https://github.com/joaquinreiners/p5-dev") 
+      window.open("https://github.com/alejaramos/magazine-wow") 
 
     }
     
