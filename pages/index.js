@@ -47,7 +47,7 @@ const  Index=() =>{
     const emotionSelected = e.object.model;
 
     if( emotionSelected === "tmbd"){
-      window.open("https://github.com/alejaramos/Tmdb") 
+      window.open("https://github.com/alejaramos/movie-search-like-TMBD") 
       
 
     }else if(emotionSelected === "ecommerce" ){
