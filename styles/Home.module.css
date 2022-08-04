@@ -1,22 +1,19 @@
-.scene{
-  width:100vw;
-  height:80vh;
+.scene {
+  width: 100vw;
+  height: 90vh;
   z-index: 0;
-
 }
 
-.canvas{
+.canvas {
   background-image: url("https://scitechdaily.com/images/Image-of-the-Day.jpg");
   text-align: center;
   /* z-index: -1; */
-
 }
 
-
-.tittle{
-  position: absolute; 
-  top: 20%;
-  left: 80px;
+.tittle {
+  position: absolute;
+  top: 12%;
+  left: 2%;
   font-weight: 900;
   font-size: 5em;
   margin: 0;
@@ -28,10 +25,10 @@
   z-index: 1;
 }
 
-.responsiveTitle{
-  font-weight: 200;
+.responsiveTitle {
+  font-weight: 400;
   font-size: 3em;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 7%;
   left: 5%;
@@ -43,11 +40,47 @@
   z-index: 1;
 }
 
-.emotion{
+.emotion {
   font-weight: 150;
   font-size: 1em;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   text-shadow: 1px 2px #670227;
   z-index: 1;
-
 }
+
+.titleContact {
+  /* top: 90%; */
+  left: 5%;
+  font-weight: 500;
+  font-size: 2em;
+  margin: 15px;
+  color: whitesmoke;
+  line-height: 0.6em;
+  letter-spacing: -2px;
+  text-align: left;
+  text-shadow: 2px 2px #e32b6d;
+  z-index: 1;
+  position: absolute;
+}
+
+.responsiveTitleContact {
+  font-weight: 400;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 90%;
+  left: 5%;
+  margin: 0;
+  line-height: 0.6em;
+  letter-spacing: -2px;
+  text-align: center;
+  text-shadow: 1px 1px #e32b6d;
+  z-index: 1;
+}
+
+.Contact {
+  height: 300px;
+  width: 100%;
+  background-image: url("https://scitechdaily.com/images/Image-of-the-Day.jpg");
+}
+

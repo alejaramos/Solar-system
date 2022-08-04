@@ -14,7 +14,7 @@ import css from "../styles/Home.module.css";
 import Contact from "../Components/Contact";
 import * as THREE from 'three'
 import { forwardRef, useLayoutEffect, useRef } from 'react'
-import { Environment, useGLTF, Float, TransformControls, QuadraticBezierLine, Backdrop, ContactShadows } from '@react-three/drei'
+import { useGLTF} from '@react-three/drei'
 
 //
 
@@ -66,8 +66,8 @@ const  Index=() =>{
   const ship = useRef()
 
   return (
-   
-    <Box id="containerSunContent" position="relative">
+   <>
+    <Box id="containerSunContent" position="relative" bg="black">
       <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
 
         Ingrid Ramos <br />
@@ -148,16 +148,20 @@ const  Index=() =>{
     
           <Sun />
           <ambientLight intensity={0.1} />
-          <directionalLight />
-        
+          <directionalLight />    
+
         </Canvas>
+
+       
   
       </div>
+
      
     </Box>
    
-  
-  
+
+   <Contact></Contact>
+   </>
   );
 }
 
