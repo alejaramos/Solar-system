@@ -11,6 +11,7 @@ import Contact from "../Components/Contact";
 import * as THREE from "three";
 import { forwardRef, useLayoutEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import Navbar from "../Components/Navbar";
 
 //
 
@@ -95,6 +96,7 @@ const Index = () => {
 
   return (
     <>
+    <Navbar></Navbar>
       <Box id="containerSunContent" position="relative" bg="black">
         <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
           Ingrid Ramos <br />
