@@ -12,7 +12,7 @@ import * as THREE from "three";
 import { forwardRef, useLayoutEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import Navbar from "../Components/Navbar";
-
+import AboutMe from "../Components/AboutMe";
 //
 
 const ShipModel = forwardRef((props, ref) => {
@@ -96,14 +96,21 @@ const Index = () => {
 
   return (
     <>
-    <Navbar></Navbar>
+      <Navbar></Navbar>
+      <AboutMe></AboutMe>
       <Box id="containerSunContent" position="relative" bg="black">
-        <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
-          Ingrid Ramos <br />
+        <h1
+          id="Projects"
+          className={isMobile ? css.responsiveTitle : css.tittle}
+        >
           <span style={{ fontSize: "0.5em" }}></span>
           <br />
           <span>My portfolio</span>
         </h1>
+        <p className={css.warningText} >
+          You can move around in this component and take a closer look at the 3D
+          elements. Each of my crew ships stores my projects.
+        </p>
 
         <div className={css.scene}>
           <Canvas
@@ -195,7 +202,7 @@ const Index = () => {
               </Html>
             </mesh>
 
-            <Sun/>
+            <Sun />
             <ambientLight intensity={0.1} />
             <directionalLight />
           </Canvas>

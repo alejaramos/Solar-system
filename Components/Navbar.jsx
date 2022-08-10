@@ -42,7 +42,6 @@ const NavLink = ({ children }) => (
 );
 
 export default function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
@@ -61,7 +60,7 @@ export default function Navbar() {
             colSpan={1}
             color="white"
           >
-            <Text as="i" fontSize="150%">
+            <Text  className={css.titleNavbar} as="i" fontSize="150%">
               My portfolio
             </Text>
           </Box>

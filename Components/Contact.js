@@ -5,7 +5,7 @@ export default function Contact() {
   const [isMobile] = useMediaQuery("(max-width: 775px)");
 
   return (
-    <Box className={css.Contact} marginTop={"0px"}>
+    <Box id="Contact" className={css.Contact} marginTop={"0px"}>
       <Heading className={isMobile ? css.responsiveTitleContact : css.titleContact}>
         Do you want me to be part of your crew?
       </Heading>
