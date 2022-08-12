@@ -8,15 +8,20 @@
 }
 
 .canvas {
-  background-image: url("https://scitechdaily.com/images/Image-of-the-Day.jpg");
+  /* background-image: url("https://scitechdaily.com/images/Image-of-the-Day.jpg"); */
+  background-color: #000000;
   text-align: center;
   /* z-index: -1; */
+  /* -webkit-border-image:-webkit-gradient(linear, left top, left bottom, from(#00abeb), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00)) 21 30 30 21 repeat repeat; */
+  border: 5px solid;
+  border-image: linear-gradient(45deg, #D8CBC7, #9f231a) 1;
+  border-top: 50%;
 }
 
 .tittle {
   position: absolute;
-  top: 12%;
-  left: 2%;
+  top: 1%;
+  left: 10%;
   font-weight: 900;
   font-size: 5em;
   margin: 0;
@@ -39,14 +44,14 @@
   line-height: 0.6em;
   letter-spacing: -2px;
   text-align: center;
-  text-shadow: 1px 1px #e32b6d;
+  text-shadow: 1px 1px #9f231a;
   z-index: 1;
 }
 
 .emotion {
   font-weight: 350;
   font-size: 1em;
-  color: #e32b6d;
+  color: #9f231a;
   /* text-shadow: 2px 2px  #e32b6d;
   ; */
   z-index: 1;
@@ -100,6 +105,7 @@
     background-color: #000000;
     height: 80px;
     width: 100%;
+    border-top: 50%;
 }
 .titleNavbar{
   font-weight: 500;
@@ -121,14 +127,16 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 5%;
+  padding-top: 2%;
 }
 .warningText{
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.05em;
   color: rgb(255, 255, 255);
   position: absolute;
-  top: 95%;
-  left: 10%;
+  bottom: 3%;
+  left: 8%;
   margin: 0;
   line-height: 0.6em;
   letter-spacing: -2px;

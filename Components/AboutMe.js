@@ -16,7 +16,7 @@ export default function AboutMe() {
 
   return (
     <Box id="AboutMe" className={css.AboutMe} bgColor="black">
-      <Img className={css.whiteImage} src="white.jpg" h="70%" w="95%"></Img>
+      <Img className={css.whiteImage} src="white.jpg" h="70%" w="90.5%"></Img>
       <Box className={css.itemC}>
         <Text>
           Hi! My name is Ingrid Ramos and After leaving my planet φιλοσοφία, I
