@@ -7,6 +7,11 @@
     margin-right: auto 
 }
 
+@font-face {
+  font-family:  'Roboto Slab', serif;
+  src: local('Roboto Slab'), url(.././fonts//Roboto_Slab\,Silkscreen/) format('truetype');
+}
+
 .canvas {
   /* background-image: url("https://scitechdaily.com/images/Image-of-the-Day.jpg"); */
   background-color: #000000;
@@ -19,6 +24,7 @@
 }
 
 .tittle {
+  font-family: Rajdhani, serif;
   position: absolute;
   top: 1%;
   left: 10%;
