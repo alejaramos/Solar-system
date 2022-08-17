@@ -1,4 +1,4 @@
-import { useMediaQuery, Heading, Box, Text, Img, Link } from "@chakra-ui/react";
+import { useMediaQuery, Heading, Box, Text, Img, Link, Spacer} from "@chakra-ui/react";
 import css from "../styles/Home.module.css";
 
 export default function Contact() {
@@ -9,6 +9,21 @@ export default function Contact() {
       <Heading className={isMobile ? css.responsiveTitleContact : css.titleContact}>
         Do you want me to be part of your crew?
       </Heading>
+<Box paddingTop={"2%"}>
+      <Box  className={css.contactMethods}>
+        Toronto, ON
+        <Spacer />
+        Canada
+      </Box>
+      <Box className={css.contactMethods}>
+      <a href="mailto:iaramosr98@gmail.com">iaramosr98@gmail.com</a>  
+      </Box>
+   
+      <Box className={css.contactMethods}>
+        +1 437 833 6991
+      </Box>
+      </Box>
+   
    
         <Link href='https://github.com/alejaramos' isExternal>
         <Img src="/github.png" boxSize='100px' alt="git icon"></Img>
