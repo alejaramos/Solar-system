@@ -42,31 +42,33 @@ const NavLink = ({ children }) => (
 );
 
 export default function Navbar() {
-
   return (
-    <>
-      <Box className={css.navbar} w="100%" h="80px">
-        <Grid
-          templateColumns="repeat(4, 1fr)"
-          gap={6}
-          justifyContent="center"
-          alignItems={"center"}
-        >
+    <Box className={css.navbar} w="100%" h="80px">
+      <Grid
+      
+        templateColumns="repeat(5, 1fr)"
+      >
+        <GridItem colSpan={2} h="10" >
           <Box
             display={"flex"}
             justifyContent="center"
             alignItems={"center"}
             h="80px"
-            colSpan={1}
             color="white"
           >
-            <Text  className={css.titleNavbar}  fontSize="250%">
+            <Text className={css.titleNavbar} fontSize="250%">
               My portfolio
             </Text>
           </Box>
-          <Box></Box>
-          <Box></Box>
-          <Box fontSize="4xl" display={"flex"} h="80px" colSpan={5} paddingTop="30px">
+        </GridItem>
+        <GridItem colStart={4} colEnd={6} h="10" >
+          <Box
+            fontSize="4xl"
+            display={"flex"}
+            h="80px"
+            paddingTop="30px"
+            justifyContent="center"
+          >
             <HStack spacing={12} alignItems={"center"}>
               <HStack
                 as={"nav"}
@@ -79,8 +81,8 @@ export default function Navbar() {
               </HStack>
             </HStack>
           </Box>
-        </Grid>
-      </Box>
-    </>
+        </GridItem>
+      </Grid>
+    </Box>
   );
 }
