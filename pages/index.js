@@ -92,22 +92,31 @@ const Index = () => {
     document.body.style.cursor = hovered ? "pointer" : "auto";
   }, [hovered]);
 
+  const [overProject, setOverProject] = useState(false);
+
+  useEffect(() => {
+    document.body.style.cursor = overProject ? "move" : "auto";
+  }, [overProject]);
+
   const ship = useRef();
 
   return (
     <>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+      </style>
       <Navbar></Navbar>
+      <Box id="About%20me"></Box>
       <AboutMe></AboutMe>
+      <Box id="Projects"></Box>
       <Box id="containerSunContent" position="relative" bg="black">
-        <h1
-          id="Projects"
-          className={isMobile ? css.responsiveTitle : css.tittle}
-        >
+        <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
           <span style={{ fontSize: "0.5em" }}></span>
           <br />
-          <span>My portfolio</span>
+          <span>My projects</span>
         </h1>
-        <p className={css.warningText} >
+        <p className={css.warningText}>
           You can move around in this component and take a closer look at the 3D
           elements. Each of my crew ships stores my projects.
         </p>
@@ -119,12 +128,15 @@ const Index = () => {
             camera={{
               position: [-6, 7, 7],
             }}
+            onPointerOver={() => setOverProject(true)}
+              onPointerOut={() => setOverProject(false)}
           >
             {/* opcion autoRotate */}
             <OrbitControls autoRotate />
 
             <ShipModel position={[-4.5, 0, 0]} ref={ship} />
             <mesh
+            
               onPointerOver={() => setHovered(true)}
               onPointerOut={() => setHovered(false)}
               position={[-4.5, 0, 0]}
@@ -135,7 +147,7 @@ const Index = () => {
               <meshPhongMaterial color="#ff0000" opacity={0.1} transparent />
 
               <Html distanceFactor={25} position={[0, 0, -1]}>
-                <h1 className={css.emotion}>movie search</h1>
+                <h1 className={css.emotion} >movie search</h1>
               </Html>
             </mesh>
 

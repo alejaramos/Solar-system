@@ -7,29 +7,26 @@
     margin-right: auto 
 }
 
-@font-face {
-  font-family:  'Roboto Slab', serif;
-  src: local('Roboto Slab'), url(.././fonts//Roboto_Slab\,Silkscreen/) format('truetype');
-}
+
 
 .canvas {
   /* background-image: url("https://scitechdaily.com/images/Image-of-the-Day.jpg"); */
   background-color: #000000;
   text-align: center;
-  /* z-index: -1; */
-  /* -webkit-border-image:-webkit-gradient(linear, left top, left bottom, from(#00abeb), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00)) 21 30 30 21 repeat repeat; */
+
   border: 5px solid;
   border-image: linear-gradient(45deg, #D8CBC7, #9f231a) 1;
   border-top: 50%;
+  
 }
 
+
 .tittle {
-  font-family: Rajdhani, serif;
   position: absolute;
   top: 1%;
   left: 10%;
-  font-weight: 900;
-  font-size: 5em;
+  font-weight: 800;
+  font-size: 4.5em;
   margin: 0;
   color: whitesmoke;
   line-height: 0.6em;
@@ -53,19 +50,25 @@
   text-shadow: 1px 1px #9f231a;
   z-index: 1;
 }
+.tittle:hover{
+  cursor: move;
+}
 
 .emotion {
   font-weight: 350;
   font-size: 1em;
   color: #9f231a;
-  /* text-shadow: 2px 2px  #e32b6d;
-  ; */
+  text-shadow: 1px 1px  #000000;
   z-index: 1;
 }
+.emotion:hover{
+  cursor: pointer;
+}
+
 
 .titleContact {
   /* top: 90%; */
-  left: 5%;
+  padding-left: 5%;
   font-weight: 500;
   font-size: 2em;
   margin: 15px;
@@ -73,16 +76,16 @@
   line-height: 0.6em;
   letter-spacing: -2px;
   text-align: left;
-  text-shadow: 2px 2px #e32b6d;
+  text-shadow: 2px 2px #9f231a;
   z-index: 1;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .responsiveTitleContact {
   font-weight: 400;
   font-size: 1.5em;
   color: rgb(255, 255, 255);
-  position: absolute;
+  /* position: absolute; */
   top: 90%;
   left: 5%;
   margin: 0;
@@ -97,6 +100,7 @@
   height: 300%;
   width: 100%;
   background-color: #000000;
+  padding-top: 50px;
 
 }
 .AboutMe{
@@ -114,15 +118,15 @@
     border-top: 50%;
 }
 .titleNavbar{
-  font-weight: 500;
-  font-size: 1.2em;
+
+  font-weight: 600;
   text-shadow: 1px 1px #9f231a;
+  padding-top: 30px;
 
 }
 
 .itemC{
   font-weight: 500;
-  font-size: 1.1em;
   position: absolute;
   top: 50%;
   left: 70%;
@@ -138,16 +142,29 @@
 }
 .warningText{
   font-weight: 400;
-  font-size: 1.05em;
+  font-size: 120%;
   color: rgb(255, 255, 255);
   position: absolute;
   bottom: 3%;
-  left: 8%;
+  left: 7%;
   margin: 0;
   line-height: 0.6em;
   letter-spacing: -2px;
   text-align: center;
   text-shadow: 1px 1px #9f231a;
   z-index: 1;
+
+}
+
+.contactMethods{
+  font-weight: 400;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  letter-spacing: -2px;
+  text-align: left;
+  text-shadow: 1px 1px #9f231a;
+  z-index: 1;
+  padding-left: 8%;
+ 
 
 }

@@ -35,7 +35,7 @@ const NavLink = ({ children }) => (
       textDecoration: "none",
       bg: useColorModeValue("#D8CBC7", "white"),
     }}
-    href={"#"}
+    href={`#${children}`}
   >
     {children}
   </Link>
@@ -60,13 +60,13 @@ export default function Navbar() {
             colSpan={1}
             color="white"
           >
-            <Text  className={css.titleNavbar} as="i" fontSize="150%">
+            <Text  className={css.titleNavbar}  fontSize="250%">
               My portfolio
             </Text>
           </Box>
           <Box></Box>
           <Box></Box>
-          <Box fontSize="4xl" display={"flex"} h="80px" colSpan={5}>
+          <Box fontSize="4xl" display={"flex"} h="80px" colSpan={5} paddingTop="30px">
             <HStack spacing={12} alignItems={"center"}>
               <HStack
                 as={"nav"}
