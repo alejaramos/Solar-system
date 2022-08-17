@@ -107,7 +107,7 @@ const Index = () => {
         url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
       </style>
       <Navbar></Navbar>
-      <Box id="About%20me"></Box>
+      <Box id="About20me"></Box>
       <AboutMe></AboutMe>
       <Box id="Projects"></Box>
       <Box id="containerSunContent" position="relative" bg="black">
