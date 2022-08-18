@@ -17,9 +17,18 @@ export default function AboutMe() {
   return (
     <Box id="AboutMe" className={css.AboutMe} bgColor="black">
       <Img className={css.whiteImage} src="white.jpg" h="70%" w="90.5%"></Img>
-      <Box className={css.itemC} w="45%">
-        <Text>
-          Hi! My name is Ingrid Ramos and After leaving my planet φιλοσοφία, I
+      <Box  >
+      
+          {isMobile?( <Text className={ css.itemCMobile}>
+            Hi! My name is Ingrid Ramos
+            <Spacer/>
+  
+            I think first on taking every risk and dropping every fear; the
+            constant learning and understanding of what happens behind constant
+            learning and understanding of what happens inside every ship, makes
+            traveling the galaxy creating and capturing new ships a beautiful
+            adventure.
+          </Text>): ( <Text className={css.itemC} > Hi! My name is Ingrid Ramos and After leaving my planet φιλοσοφία, I
           dedicated myself to capturing ships across the galaxy. To do this a
           month ago I completed an Engineering Immersion program at Plataforma5
           for 800 hours in three months (What a crazy thing, isn't it?). It
@@ -38,7 +47,9 @@ export default function AboutMe() {
           probably find me reading books, learning new things, tasting beer or
           listening to new new things, tasting beer or listening to diferents
           music genres.
-        </Text>
+          </Text>) }
+          
+        
       </Box>
     </Box>
   );
