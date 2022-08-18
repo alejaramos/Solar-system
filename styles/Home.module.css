@@ -111,9 +111,7 @@
 
 .navbar{
     background-color: #000000;
-    height: 80px;
-    width: 100%;
-    border-top: 50%;
+
 }
 
 .titleNavbar{
@@ -131,7 +129,18 @@
   left: 70%;
   transform: translate(-60%, -50%);
   text-align: justify;
+  width: 45%;
 }
+.itemCMobile{
+  font-size: 90%;
+  position: absolute;
+  top: 5%;
+  left: 7%;
+  width: 85vw;
+
+  text-align: justify;
+}
+
 .whiteImage{
   display: block;
   margin-left: auto;
@@ -165,4 +174,8 @@
   padding-left: 8%;
  
 
+}
+
+.backgroundNavbarMobile{
+  background:rgba(242, 242, 242, 0.361)
 }
