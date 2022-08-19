@@ -76,19 +76,18 @@
   text-align: left;
   text-shadow: 2px 2px #9f231a;
   z-index: 1;
-  /* position: absolute; */
+
 }
 
 .responsiveTitleContact {
   font-weight: 400;
   font-size: 1.5em;
   color: rgb(255, 255, 255);
-  /* position: absolute; */
+
   top: 90%;
   left: 5%;
   margin: 0;
-  line-height: 0.6em;
-  letter-spacing: -2px;
+
   text-align: center;
   text-shadow: 1px 1px #9f231a;
   z-index: 1;
@@ -137,6 +136,7 @@
   top: 5%;
   left: 7%;
   width: 85vw;
+
 
   text-align: justify;
 }
