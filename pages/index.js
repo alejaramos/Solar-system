@@ -107,8 +107,8 @@ const Index = () => {
         url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
       </style>
       <Navbar></Navbar>
-      <Box id="About20me"></Box>
-      <AboutMe></AboutMe>
+      {isMobile ? <Box id="About20me"></Box> : <AboutMe />}
+
       <Box id="Projects"></Box>
       <Box id="containerSunContent" position="relative" bg="black">
         <h1 className={isMobile ? css.responsiveTitle : css.tittle}>
@@ -129,14 +129,13 @@ const Index = () => {
               position: [-6, 7, 7],
             }}
             onPointerOver={() => setOverProject(true)}
-              onPointerOut={() => setOverProject(false)}
+            onPointerOut={() => setOverProject(false)}
           >
             {/* opcion autoRotate */}
             <OrbitControls autoRotate />
 
             <ShipModel position={[-4.5, 0, 0]} ref={ship} />
             <mesh
-            
               onPointerOver={() => setHovered(true)}
               onPointerOut={() => setHovered(false)}
               position={[-4.5, 0, 0]}
@@ -147,7 +146,7 @@ const Index = () => {
               <meshPhongMaterial color="#ff0000" opacity={0.1} transparent />
 
               <Html distanceFactor={25} position={[0, 0, -1]}>
-                <h1 className={css.emotion} >movie search</h1>
+                <h1 className={css.emotion}>movie search</h1>
               </Html>
             </mesh>
 

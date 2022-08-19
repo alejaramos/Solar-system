@@ -52,10 +52,7 @@ export default function NavbarMobile() {
           </Box>
           <DrawerBody className={css.backgroundNavbarMobile}>
             <Stack spacing={8}>
-              <a href="#AboutMe">
-                About me
-                <ChevronDownIcon />
-              </a>
+              
               <a href="#Projects">
                 Projects
                 <ChevronDownIcon />
